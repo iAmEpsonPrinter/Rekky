@@ -17,16 +17,16 @@ class Memes(commands.Cog):
         print(lol)
 
         statss = []
-        async for stat in self.client.memeCollection.find(
-            {"subreddit": random.choice(self.client.subredditList)}
-        ):
+        async for stat in self.client.memeCollection.find():
             statss.append(stat)
 
         print(random.choice([stat["url"] for stat in statss]))
 
-        await ctx.send(f'{random.choice([stat["url"] for stat in statss])}')
-        await ctx.send(f'{random.choice([stat["url"] for stat in statss])}')
-        await ctx.send(f'{random.choice([stat["url"] for stat in statss])}')
+        await ctx.send(
+            f'{random.choice([stat["url"] for stat in statss])}\n'
+            f'{random.choice([stat["url"] for stat in statss])}'
+            f'\n {random.choice([stat["url"] for stat in statss])}'
+        )
 
 
 def setup(client):
