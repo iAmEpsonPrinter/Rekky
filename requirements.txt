@@ -33,7 +33,7 @@ CommandTool==0.5.3
 configparser==5.0.1
 copypaste==0.2
 crayons==0.4.0
-cryptography==3.0
+cryptography==3.3.2
 cx-Freeze==6.5.3
 cycler==0.10.0
 decorator==4.4.2
