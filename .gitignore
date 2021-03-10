@@ -1,0 +1,11 @@
+venv/*
+*.idea/*
+bin/*
+lib/*
+lib64
+pyvenv.cfg
+share/*
+*.pyc
+*.vscode
+*.tox
+token.json
