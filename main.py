@@ -43,9 +43,16 @@ client.memeCollection = client.cluster["rekky"]["memes"]
 
 @tasks.loop(seconds=60)
 async def change_status():
+    client.status = cycle(
+        [
+            "Message me to invite me!",
+            f" {len(client.guilds)} guilds",
+            f" {len(client.users)} users",
+        ]
+    )
     await client.change_presence(
         activity=discord.Activity(
-            type=discord.ActivityType.watching, name=f"{next(status)}"
+            type=discord.ActivityType.watching, name=f"{next(client.status)}"
         )
     )
 
@@ -53,12 +60,13 @@ async def change_status():
 @change_status.before_loop
 async def before_change_status():
     await client.wait_until_ready()
-    global status
-    status = cycle(
+    print(f"Guilds - {len(client.guilds)}")
+    print(f"Users - {len(client.users)}")
+    client.status = cycle(
         [
             "Message me to invite me!",
-            f"over {len(client.guilds)} guilds",
-            f"over {len(client.users)} users",
+            f" {len(client.guilds)} guilds",
+            f" {len(client.users)} users",
         ]
     )
 
@@ -94,7 +102,6 @@ async def publish_stats():
 
 
 publish_stats.start()
-
 change_status.start()
 
 token = data["token"]
