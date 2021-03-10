@@ -9,12 +9,10 @@ class Helpp(commands.Cog):
     @commands.command()
     async def help(self, ctx):
         stats_commands = {
-            ".leaderboard infections": "`Shows the top infections leaderboard`",
-            ".leaderboard xp": "`Shows the top XP leaderboard`",
-            ".alltimegraph": "`Shows the alltime statistics graph`",
-            ".daygraph": "`Shows the last day statistics graph`",
-            ".xp": "`[@MemberMention] Shows the users stats`",
-            ".stats": "`Shows the bots stats`",
+            ".announce": "`[ChannelMention] [announcement]`",
+            ".prefix": "`[NewPrefix]`",
+            ".purge": "`[amount]`",
+            ".meme": "`Sends random memes from a huge database!`",
         }
 
         misc_commands = {
