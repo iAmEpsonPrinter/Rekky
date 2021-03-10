@@ -101,8 +101,6 @@ async def publish_stats():
     print(f"discord bot list post - {request_discord_botlist}")
 
 
-
-
 @client.event
 async def on_guild_join(guild):
     async for entry in guild.audit_logs(action=discord.AuditLogAction.bot_add):
@@ -186,7 +184,6 @@ async def on_guild_remove(guild):
         text="Like the bot? Consider voting for it by typing .vote (It would really help us out!)"
     )
     await channel.send(embed=embed)
-
 
 
 publish_stats.start()
