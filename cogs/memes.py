@@ -23,7 +23,9 @@ class Memes(commands.Cog):
         print(random.choice([stat["url"] for stat in statss]))
 
         await ctx.send(
-            f'{random.choice([stat["url"] for stat in statss])}\n {random.choice([stat["url"] for stat in statss])} \n {random.choice([stat["url"] for stat in statss])}'
+            f'{random.choice([stat["url"] for stat in statss])}\n'
+            f'{random.choice([stat["url"] for stat in statss])}'
+            f'\n {random.choice([stat["url"] for stat in statss])}'
         )
 
 
