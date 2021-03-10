@@ -101,6 +101,94 @@ async def publish_stats():
     print(f"discord bot list post - {request_discord_botlist}")
 
 
+
+
+@client.event
+async def on_guild_join(guild):
+    async for entry in guild.audit_logs(action=discord.AuditLogAction.bot_add):
+        try:
+            if entry.target == client.user:
+                embed = discord.Embed(
+                    title="Hello! 👋", color=discord.colour.Color.green()
+                )
+                embed.set_author(
+                    name="Discord Pandemic", icon_url=client.user.avatar_url
+                )
+                embed.add_field(
+                    name="Thank you for inviting me! 😊",
+                    value="Currently this bot does not have all of "
+                    "the advertised features, as stated in the "
+                    "bot description. However, by inviting the "
+                    "bot you are allowing us to test new features "
+                    "(such as statistics) and much more behind the scenes.",
+                    inline=False,
+                )
+                embed.add_field(
+                    name="Support 🆘",
+                    value="For the latest changelog and support "
+                    "please join: https://discord.gg/xDaUF2UaQZ",
+                    inline=False,
+                )
+                embed.set_footer(
+                    text="Like the bot? Consider voting for it by typing "
+                    ".vote (It would really help us out!)"
+                )
+                await entry.user.send(embed=embed)
+        except PermissionError:
+            print("Permission Error")
+    channel = await client.fetch_channel(812017926005719062)
+    embed = discord.Embed(
+        title=client.user.display_name, color=discord.colour.Color.green()
+    )
+    embed.set_author(name=client.user.display_name, icon_url=client.user.avatar_url)
+    embed.add_field(name=f"New server - {guild.name}", value=guild.name, inline=True)
+    embed.add_field(
+        name="New user count",
+        value=f"{len(client.users)} (+{guild.member_count})",
+        inline=True,
+    )
+    embed.add_field(
+        name="New Guild Count", value=f"{len(client.guilds)} (+1)", inline=True
+    )
+    embed.add_field(
+        name="New Emoji Count",
+        value=f"{len(client.emojis)} (+{len(guild.emojis)})",
+        inline=True,
+    )
+    embed.set_footer(
+        text="Like the bot? Consider voting for it by typing .vote (It would really help us out!)"
+    )
+    await channel.send(embed=embed)
+
+
+@client.event
+async def on_guild_remove(guild):
+    channel = await client.fetch_channel(812017947659730965)
+    embed = discord.Embed(
+        title=client.user.display_name, color=discord.colour.Color.red()
+    )
+    embed.set_author(name=client.user.display_name, icon_url=client.user.avatar_url)
+    embed.add_field(name=f"New server - {guild.name}", value=guild.name, inline=True)
+    embed.add_field(
+        name="New user count",
+        value=f"{len(client.users)} (-{guild.member_count})",
+        inline=True,
+    )
+    embed.add_field(
+        name="New Guild Count", value=f"{len(client.guilds)} (-1)", inline=True
+    )
+    embed.add_field(
+        name="New Emoji Count",
+        value=f"{len(client.emojis)} (-{len(guild.emojis)})",
+        inline=True,
+    )
+    embed.set_footer(
+        text="Like the bot? Consider voting for it by typing .vote (It would really help us out!)"
+    )
+    await channel.send(embed=embed)
+
+
+
 publish_stats.start()
 change_status.start()
 
