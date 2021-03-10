@@ -30,7 +30,7 @@ click==7.1.2
 colorama==0.4.4
 colorthief==0.2.1
 CommandTool==0.5.3
-configparser==5.0.1
+configparser==5.0.2
 copypaste==0.2
 crayons==0.4.0
 cryptography==3.3.2
