@@ -192,6 +192,6 @@ wrapt==1.12.1
 yapf==0.30.0
 yarl==1.6.3
 youtube-dl==2021.3.3
-zipp==3.4.0
+zipp==3.4.1
 zope.event==4.5.0
 zope.interface==5.2.0
