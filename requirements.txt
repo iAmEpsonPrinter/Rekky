@@ -97,7 +97,7 @@ Menu==3.2.2
 mock==4.0.3
 motor==2.3.1
 moviepy==1.0.3
-mtranslate==1.6
+mtranslate==1.8
 multidict==5.1.0
 mypy-extensions==0.4.3
 nekos.py==1.0.3
