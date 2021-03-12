@@ -54,7 +54,7 @@ djangocms-admin-style==2.0.2
 dnspython==2.1.0
 dpymenus==1.2.3
 Eel==0.12.4
-emoji==0.6.0
+emoji==1.2.0
 ffmpy==0.3.0
 filelock==3.0.12
 filetype==1.0.5
