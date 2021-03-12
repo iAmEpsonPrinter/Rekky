@@ -49,7 +49,7 @@ django-classy-tags==2.0.0
 django-cms==3.8.0
 django-formtools==2.2
 django-sekizai==2.0.0
-django-treebeard==4.3.1
+django-treebeard==4.5.1
 djangocms-admin-style==2.0.2
 dnspython==2.1.0
 dpymenus==1.2.3
