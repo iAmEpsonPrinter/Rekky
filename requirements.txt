@@ -167,7 +167,7 @@ setproctitle==1.2.2
 shiboken2==5.15.2
 SimplePool==0.1
 six==1.15.0
-snowballstemmer==2.0.0
+snowballstemmer==2.1.0
 soupsieve==2.0.1
 sqlparse==0.4.1
 statcord.py==3.0.5
