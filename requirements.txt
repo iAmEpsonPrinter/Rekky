@@ -171,7 +171,7 @@ snowballstemmer==2.1.0
 soupsieve==2.0.1
 sqlparse==0.4.1
 statcord.py==3.0.5
-toml==0.10.1
+toml==0.10.2
 tox==3.23.0
 tqdm==4.50.2
 typed-ast==1.4.1
