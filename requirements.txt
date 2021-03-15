@@ -173,7 +173,7 @@ sqlparse==0.4.1
 statcord.py==3.0.5
 toml==0.10.2
 tox==3.23.0
-tqdm==4.50.2
+tqdm==4.59.0
 typed-ast==1.4.1
 typing-extensions==3.7.4.3
 tzlocal==2.1
