@@ -78,7 +78,7 @@ ImageHash==4.2.0
 imageio==2.9.0
 imageio-ffmpeg==0.4.2
 ImageScraper==2.0.7
-importlib-metadata==3.7.0
+importlib-metadata==3.7.3
 iniconfig==1.1.1
 instabot==0.117.0
 instagram-private-api==1.6.0.0
