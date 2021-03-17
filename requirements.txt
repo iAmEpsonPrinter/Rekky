@@ -189,7 +189,7 @@ websockets==8.1
 wget==3.2
 whichcraft==0.6.1
 wrapt==1.12.1
-yapf==0.30.0
+yapf==0.31.0
 yarl==1.6.3
 youtube-dl==2021.3.3
 zipp==3.4.1
